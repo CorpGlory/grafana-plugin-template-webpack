@@ -8,10 +8,10 @@ module.exports = {
   target: 'node',
   context: __dirname + "/src",
   entry: './module.js',
-  devtool: 'inline-source-map',
   output: {
     filename: "module.js",
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    libraryTarget: "amd"
   },
   externals: {
     "app/plugins/sdk": "app/plugins/sdk"
@@ -23,27 +23,22 @@ module.exports = {
     ]),
     new CopyWebpackPlugin([
       { from: 'plugin.json' },
-      //{ from: 'module.js', 'module.js' }
     ])
-    // ,
-    // new WebpackSystemRegister({
-    //   systemjsDeps: ["app/plugins/sdk"]
-    // })
   ],
   resolve: {
   },
   module: {
-    // rules: [
-    //   {
-    //     test: /\.js$/,
-    //     exclude: /(node_modules)/,
-    //     use: {
-    //       loader: 'babel-loader',
-    //       options: {
-    //         presets: ['env']
-    //       }
-    //     }
-    //   }
-    // ]
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /(node_modules)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['env']
+          }
+        }
+      }
+    ]
   }
 }

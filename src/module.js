@@ -7,12 +7,11 @@ class Ctrl extends PanelCtrl {
   }
 
   link(scope, element) {
-    this._graph = new Graph(element);
+    
   }
   
 }
 
 Ctrl.template = "<div>Hello from <b>Template Plugin</b></div>";
-
 
 export { Ctrl as PanelCtrl }
