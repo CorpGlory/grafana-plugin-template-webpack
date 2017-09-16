@@ -19,9 +19,6 @@ module.exports = {
     new webpack.optimize.OccurrenceOrderPlugin(),
     new CopyWebpackPlugin([
       { from: 'plugin.json' },
-    ]),
-    new CopyWebpackPlugin([
-      { from: 'plugin.json' },
     ])
   ],
   resolve: {

@@ -2,7 +2,7 @@
 
 # Usage
 
-Grafana [plugin] (http://docs.grafana.org/plugins/developing/development/)
+Grafana [plugin](http://docs.grafana.org/plugins/developing/development/)
 [webpack](https://webpack.github.io) version
 
 ```
