@@ -2,11 +2,10 @@
 
 # Usage
 
-Show list of progress items by mapping your data.
-
-Build
+Grafana [plugin] (http://docs.grafana.org/plugins/developing/development/)
+[webpack](https://webpack.github.io) version
 
 ```
 npm install
-grunt
+npm run build
 ```
