@@ -1,0 +1,22 @@
+{
+  "type": "panel",
+  "name": "Plugin Template Name",
+  "id": "grafana-plugin-template-webpack",
+  "info": {
+    "description": "Plugin Template Name Description",
+    "author": {
+      "name": "Author Name",
+      "url": "example.com"
+    },
+    "keywords": [ ],
+    "logos": { },
+    "links": [ ],
+    "screenshots": [ ],
+    "version": "0.0.1",
+    "updated": "2017-04-05"
+  },
+  "dependencies": {
+    "grafanaVersion": "4.1.1",
+    "plugins": [ ]
+  }
+}
