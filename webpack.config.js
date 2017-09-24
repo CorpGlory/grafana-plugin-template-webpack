@@ -12,9 +12,17 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     libraryTarget: "amd"
   },
-  externals: {
-    "app/plugins/sdk": "app/plugins/sdk"
-  },
+  externals: [
+    // remove the line below if you don't want to use buildin versions
+    'jquery', 'lodash', 'moment',
+    function(context, request, callback) {
+      var prefix = 'grafana/';
+      if (request.indexOf(prefix) === 0) {
+        return callback(null, request.substr(prefix.length));
+      }
+      callback();
+    }
+  ],
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),
     new CopyWebpackPlugin([
