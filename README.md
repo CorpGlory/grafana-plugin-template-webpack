@@ -5,8 +5,9 @@ Grafana [plugin](http://docs.grafana.org/plugins/developing/development/)
 
 # Benefits
 
-* Allow you to get rid of `/external` folder with libs` sources
-* Smaller result bundle than with Grunt build
+* Allow you to susbitute Bower with npm 
+* Get rid of `/external` folder with libs' sources (if you still use it)
+* Smaller result bundle in comparision with Grunt build
 * Get advantege of Webpack features
 
 # Build plugin
