@@ -3,12 +3,12 @@
 Grafana [plugin](http://docs.grafana.org/plugins/developing/development/)
 [webpack](https://webpack.github.io) version
 
-# Benefits
+# Features
 
-* Allow you to susbitute Bower with npm 
-* Get rid of `/external` folder with libs' sources (if you still use it)
-* Smaller result bundle in comparision with Grunt build
-* Get advantege of Webpack features
+* Uses npm instead of bower
+* Doesn't use `/external` folder with libs’ sources
+* Smaller resulting bundle compared to Grunt build
+* All webpack features available
 
 # Build plugin
 
