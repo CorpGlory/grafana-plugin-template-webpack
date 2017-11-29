@@ -6,7 +6,7 @@ Grafana [plugin](http://docs.grafana.org/plugins/developing/development/)
 # Features
 
 * Uses npm instead of bower
-* Doesn't use `/external` folder with libs’ sources
+* Avoid using `/external` folder with libs’ sources (but you can, if you want)
 * Smaller resulting bundle compared to Grunt build
 * All webpack features available
 
