@@ -7,6 +7,7 @@ module.exports = {
   target: 'node',
   context: __dirname + "/src",
   entry: './module.js',
+  // watch: true,  // uncomment if you want "dev mode watching"
   output: {
     filename: "module.js",
     path: path.resolve(__dirname, 'dist'),
