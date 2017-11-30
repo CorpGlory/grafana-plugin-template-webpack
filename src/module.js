@@ -1,4 +1,4 @@
-import { PanelCtrl } from 'app/plugins/sdk';
+import { PanelCtrl } from 'grafana/app/plugins/sdk'; // will be resolved to app/plugins/sdk
 
 class Ctrl extends PanelCtrl {
 
