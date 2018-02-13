@@ -16,7 +16,7 @@
     "updated": "2017-04-05"
   },
   "dependencies": {
-    "grafanaVersion": "4.1.1",
+    "grafanaVersion": "4.6.x",
     "plugins": [ ]
   }
 }
