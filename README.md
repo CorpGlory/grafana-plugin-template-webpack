@@ -19,13 +19,15 @@ npm run build
 ```
 
 # Styles
-There are template SASS files at [src/css/](src/css) directory.
-__Change ID of root div to ID of your plugin__ in [template.html](src/partials/template.html) and [SASS files](src/css) in order __to prevent CSS conflicts between plugins__.
+There are template SASS files at [src/css/](src/css).
+
+__Change root tag__ in [SASS files](src/css) __to default Grafana tag (see example below) with ID of your plugin__ in order __to prevent CSS conflicts between plugins__.
+
+Root tag example: panel-plugin-_grafana-plugin-template-webpack_ (where _grafana-plugin-template-webpack_ is ID of your plugin).
 
 If you don't need separate styles for for dark and light themes - follow comments in [module.js](src/module.js).
 
-If you want to use CSS instead of SASS - just change files extensions at [src/css/](src/css) directory
-and in [module.js](src/module.js).
+If you want to use CSS instead of SASS - just change files extensions at [src/css/](src/css) and in [module.js](src/module.js).
 
 # See also
 
