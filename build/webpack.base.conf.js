@@ -53,8 +53,10 @@ module.exports = {
         exclude: /(external)/,
         use: {
           loader: 'babel-loader',
-          options: {
-            presets: ['env']
+          query: {
+            presets: [
+              require.resolve('babel-preset-env')
+            ]
           }
         }
       },
