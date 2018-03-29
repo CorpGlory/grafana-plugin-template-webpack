@@ -33,3 +33,8 @@ If you want to use CSS instead of SASS - just change files extensions at [src/cs
 
 * [TypeScript extension](https://github.com/CorpGlory/grafana-plugin-template-webpack-typescript)
 * [Progress List plugin](https://github.com/CorpGlory/grafana-progress-list) - full plugin with assets, libs, etc based on this temlpate
+
+
+## Credits
+
+Made by [CorpGlory Team](http://corpglory.com/)
