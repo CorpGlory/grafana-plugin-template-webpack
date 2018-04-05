@@ -10,6 +10,7 @@ Grafana [plugin](http://docs.grafana.org/plugins/developing/development/)
 * Smaller resulting bundle compared to Grunt build
 * All webpack features available
 * SASS support with separate styles for dark and light Grafana themes
+* Debugging with [vscode-chrome-debug](https://github.com/Microsoft/vscode-chrome-debug)
 
 # Build plugin
 
