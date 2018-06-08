@@ -8,7 +8,7 @@
     "dev": "webpack --config build/webpack.dev.conf.js",
     "precommit": "pretty-quick --staged",
     "pretty": "prettier --write src/**/*.ts",
-    "lint": "tslint -c tslint.json --project tsconfig.json --type-check"
+    "lint": "tslint -c tslint.json --project tsconfig.json"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
@@ -47,6 +47,9 @@
     "grafana-sdk-mocks": "github:ryantxu/grafana-sdk-mocks",
     "install": "^0.11.0",
     "loader-utils": "^1.1.0",
+    "ng-annotate-loader": "^0.6.1",
+    "ng-annotate-webpack-plugin": "^0.2.1-pre",
+    "ngtemplate-loader": "^2.0.1",
     "node-sass": "^4.9.0",
     "prettier": "1.11.1",
     "pretty-quick": "^1.4.1",

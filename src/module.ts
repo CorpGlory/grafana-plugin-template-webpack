@@ -2,19 +2,19 @@
 
 import { PanelCtrl } from 'app/plugins/sdk';
 
-import "./css/panel.base.scss";
+import './css/panel.base.scss';
 
 // Remove next imports if you don't need separate styles for light and dark themes
-import "./css/panel.dark.scss";
-import "./css/panel.light.scss";
+import './css/panel.dark.scss';
+import './css/panel.light.scss';
 
 class Ctrl extends PanelCtrl {
-  static templateUrl = 'partials/module.html';
+  static templateUrl = 'partials/template.html';
 
   // Internal values
   _panelPath: string;
-  pluginId: string; // actuall defined in parent
 
+  /** @ngInject */
   constructor($scope, $injector) {
     super($scope, $injector);
   }
@@ -25,7 +25,6 @@ class Ctrl extends PanelCtrl {
 
   initStyles() {
     // window.System.import(this.panelPath + "css/panel.base.css!");
-
     // // Remove next lines if you don't need separate styles for light and dark themes
     // if (grafanaBootData.user.lightTheme) {
     //   window.System.import(this.panelPath + "css/panel.light.css!");
@@ -36,7 +35,7 @@ class Ctrl extends PanelCtrl {
 
   get panelPath() {
     if (this._panelPath === undefined) {
-      this._panelPath = `/public/plugins/${this.pluginId}/`;
+      this._panelPath = `/public/plugins/${this.pluginId}/`;  // what if root is different?
     }
     return this._panelPath;
   }

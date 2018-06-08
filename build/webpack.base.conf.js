@@ -4,6 +4,7 @@ const moment = require('moment');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const ReplaceInFileWebpackPlugin = require('replace-in-file-webpack-plugin');
+const ngAnnotatePlugin = require('ng-annotate-webpack-plugin');
     
 const ExtractTextPluginBase = new ExtractTextPlugin('./css/panel.base.css');
 const ExtractTextPluginLight = new ExtractTextPlugin('./css/panel.light.css');
@@ -30,13 +31,14 @@ module.exports = {
     function (context, request, callback) {
       var prefix = 'app/'; // 'grafana/';
       if (request.indexOf(prefix) === 0) {
-        return callback(null, request.substr(prefix.length));
+        return callback(null, request); //request.substr(prefix.length));
       }
       callback();
     }
   ],
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),
+    new ngAnnotatePlugin(),
     new CopyWebpackPlugin([
       { from: '../README.md' },
       { from: 'plugin.json' },
