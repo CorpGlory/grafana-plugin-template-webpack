@@ -29,9 +29,13 @@ module.exports = {
     // remove the line below if you don't want to use buildin versions from grafana
     'jquery', 'lodash', 'moment', 'react', 'react-dom',
     function (context, request, callback) {
-      var prefix = 'app/'; // 'grafana/';
+      var prefix = 'app/'; // the grafana bindings
       if (request.indexOf(prefix) === 0) {
-        return callback(null, request); //request.substr(prefix.length));
+        return callback(null, request);
+      }
+      prefix = 'grafana/'; // using the corpglory bindings
+      if (request.indexOf(prefix) === 0) {
+        return callback(null, request.substr(prefix.length));
       }
       callback();
     }
