@@ -11,7 +11,14 @@ Based on:
 * Copies README
 * Automatically puts the version & date in plugin.json
 * Adds tslint & prettier
+* includes an editor page
 * ...
+
+
+# Wishlist
+* easier debugging?  view sources is all minified 
+* react...
+
 
 # Build plugin
 

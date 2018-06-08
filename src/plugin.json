@@ -1,7 +1,7 @@
 {
   "type": "panel",
   "name": "Plugin Template",
-  "id": "username-pluginname",
+  "id": "grafana-plugin-template-webpack",
   "info": {
     "description": "Plugin Template Name Description",
     "author": {

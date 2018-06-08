@@ -2079,7 +2079,7 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.2:
 
 "grafana-sdk-mocks@github:ryantxu/grafana-sdk-mocks":
   version "1.0.0"
-  resolved "https://codeload.github.com/ryantxu/grafana-sdk-mocks/tar.gz/0a004880f67efcf0c7f14b763eb724d09f8011d8"
+  resolved "https://codeload.github.com/ryantxu/grafana-sdk-mocks/tar.gz/e62ddb5450e102a832cd890974c6235262471bf8"
 
 har-schema@^1.0.5:
   version "1.0.5"

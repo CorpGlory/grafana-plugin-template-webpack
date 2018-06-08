@@ -2,6 +2,9 @@
 
 import { PanelCtrl } from 'app/plugins/sdk';
 
+// Loads the react component
+// import './simple';
+
 import './css/panel.base.scss';
 
 // Remove next imports if you don't need separate styles for light and dark themes
@@ -9,14 +12,22 @@ import './css/panel.dark.scss';
 import './css/panel.light.scss';
 
 class Ctrl extends PanelCtrl {
-  static templateUrl = 'partials/template.html';
+  static templateUrl = 'partials/module.html';
 
   // Internal values
   _panelPath: string;
 
+
   /** @ngInject */
   constructor($scope, $injector) {
     super($scope, $injector);
+
+    this.events.on('init-edit-mode', this.onInitEditMode.bind(this));
+  }
+
+  onInitEditMode() {
+    this.addEditorTab('Editor', this.panelPath + 'partials/editor.html', 1);
+    this.editorTabIndex = 1;
   }
 
   link(scope, element) {
@@ -35,7 +46,7 @@ class Ctrl extends PanelCtrl {
 
   get panelPath() {
     if (this._panelPath === undefined) {
-      this._panelPath = `/public/plugins/${this.pluginId}/`;  // what if root is different?
+      this._panelPath = `public/plugins/${this.pluginId}/`;  // what if root is different?
     }
     return this._panelPath;
   }
