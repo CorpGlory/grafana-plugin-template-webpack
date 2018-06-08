@@ -2,8 +2,7 @@
 
 [![CircleCI](https://circleci.com/gh/ryantxu/grafana-plugin-template-webpack/tree/master.svg?style=svg)](https://circleci.com/gh/ryantxu/grafana-plugin-template-webpack/tree/master)
 
-Based on:
-* [TypeScript extension](https://github.com/CorpGlory/grafana-plugin-template-webpack)
+Fork from [CorpGlory](https://github.com/CorpGlory/grafana-plugin-template-webpack)
 
 
 # Changes
@@ -17,12 +16,16 @@ Based on:
 * simple [circleci](https://circleci.com/gh/ryantxu/grafana-plugin-template-webpack) config
 * ...
 
+# TODO
+* icon
+* tests
 
 # Wishlist
-* easier debugging?  view sources is all minified 
+* better debugging?  view sources is all minified :(
 * react...
 * simple tests & circleci verification
-
+* 'release' script.  'dist' is ignored... but release script should make a branch add dist and remove the .gitignore... then tag it?
+    * pull requests with dist included are really annoying
 
 
 # Build plugin
