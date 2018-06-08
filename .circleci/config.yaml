@@ -1,0 +1,27 @@
+jobs:
+  build:
+    docker:
+      - image: circleci/node:6.11.4
+    branches:
+      only:
+        - master
+        - /rc-.*/
+    steps:
+      - checkout
+      - run:
+          name: install yarn
+          command: 'sudo npm install -g yarn --quiet'
+      - restore_cache:
+          key: dependency-cache-{{ checksum "yarn.lock" }}
+      - run:
+          name: yarn install
+          command: 'yarn install --pure-lockfile --no-progress'
+      - save_cache:
+          key: dependency-cache-{{ checksum "yarn.lock" }}
+          paths:
+            - node_modules
+      - run:
+          name: build
+          command: 'yarn build'
+      - store_artifacts:
+          path: dist
