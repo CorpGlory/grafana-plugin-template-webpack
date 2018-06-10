@@ -17,11 +17,11 @@ Fork from [CorpGlory](https://github.com/CorpGlory/grafana-plugin-template-webpa
 * Adds tslint & prettier
 * includes an editor page
 * simple [circleci](https://circleci.com/gh/ryantxu/grafana-plugin-template-webpack) config
-* simple react component
+* icon
 
 
 # TODO
-* icon
+* simple react component... props not working? 
 * tests
 
 # Wishlist

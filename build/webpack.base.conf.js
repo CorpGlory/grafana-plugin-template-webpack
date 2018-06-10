@@ -46,7 +46,8 @@ module.exports = {
     new CopyWebpackPlugin([
       { from: '../README.md' },
       { from: 'plugin.json' },
-      { from: 'partials/*' }
+      { from: 'partials/*' },
+      { from: 'img/*' }
     ]),
     new ReplaceInFileWebpackPlugin([{
       dir: 'dist',

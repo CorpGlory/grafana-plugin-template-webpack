@@ -8,9 +8,15 @@
       "name": "Author Name",
       "url": "example.com"
     },
-    "keywords": [ ],
-    "logos": { },
-    "links": [ ],
+    "keywords": [ ],    
+    "logos": {
+      "small": "img/logo.svg",
+      "large": "img/logo.svg"
+    },
+    "links": [
+      {"name": "Project site", "url": "https://github.com/ryantxu/grafana-plugin-template-webpack"},
+      {"name": "MIT License",  "url": "https://github.com/ryantxu/grafana-plugin-template-webpack/blob/master/LICENSE"}
+    ],
     "screenshots": [ ],
     "version": "%VERSION%",
     "updated": "%TODAY%"
