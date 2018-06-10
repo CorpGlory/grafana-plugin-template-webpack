@@ -1,9 +1,8 @@
 # Webpack/Typescript Template for Grafana plugins development
 
 [![CircleCI](https://circleci.com/gh/ryantxu/grafana-plugin-template-webpack/tree/master.svg?style=svg)](https://circleci.com/gh/ryantxu/grafana-plugin-template-webpack/tree/master)
-
-[![Dependancy Status](https://david-dm.org/ryantxu/grafana-plugin-template-webpack.svg)](https://david-dm.org/ryantxu/grafana-plugin-template-webpack)
-
+[![dependencies Status](https://david-dm.org/ryantxu/grafana-plugin-template-webpack/status.svg)](https://david-dm.org/ryantxu/grafana-plugin-template-webpack)
+[![devDependencies Status](https://david-dm.org/ryantxu/grafana-plugin-template-webpack/dev-status.svg)](https://david-dm.org/ryantxu/grafana-plugin-template-webpack?type=dev)
 
 
 Fork from [CorpGlory](https://github.com/CorpGlory/grafana-plugin-template-webpack)
@@ -18,7 +17,7 @@ Fork from [CorpGlory](https://github.com/CorpGlory/grafana-plugin-template-webpa
 * Adds tslint & prettier
 * includes an editor page
 * simple [circleci](https://circleci.com/gh/ryantxu/grafana-plugin-template-webpack) config
-* react component
+* simple react component
 
 
 # TODO
