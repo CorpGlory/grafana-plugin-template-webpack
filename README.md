@@ -2,8 +2,7 @@
 
 [![CircleCI](https://circleci.com/gh/ryantxu/grafana-plugin-template-webpack/tree/master.svg?style=svg)](https://circleci.com/gh/ryantxu/grafana-plugin-template-webpack/tree/master)
 
-[![Dependancy Status](https://david-dm.org/ryantxu/grafana-plugin-template-webpack.svg)
-
+[![Dependancy Status](https://david-dm.org/ryantxu/grafana-plugin-template-webpack.svg)](https://david-dm.org/ryantxu/grafana-plugin-template-webpack)
 
 
 
