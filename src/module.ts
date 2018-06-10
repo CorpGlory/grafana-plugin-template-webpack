@@ -3,7 +3,7 @@
 import { PanelCtrl } from 'app/plugins/sdk';
 
 // Loads the react component
-// import './simple';
+import './simple';
 
 import './css/panel.base.scss';
 
@@ -28,6 +28,7 @@ class Ctrl extends PanelCtrl {
   onInitEditMode() {
     this.addEditorTab('Editor', this.panelPath + 'partials/editor.html', 1);
     this.editorTabIndex = 1;
+    console.log('OPEN editor!');
   }
 
   link(scope, element) {

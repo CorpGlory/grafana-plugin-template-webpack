@@ -1,8 +1,8 @@
 ///<reference path="../node_modules/grafana-sdk-mocks/app/headers/common.d.ts" />
 
 import React from 'react';
+import coreModule from 'app/core/core_module';
 
-import { react2AngularDirective } from 'app/core/utils/react2angular';
 
 export interface SimplePanelProps {
   name: string;
@@ -29,4 +29,13 @@ export class SimpleReactPanel extends React.Component<SimplePanelProps,SimplePan
   }
 }
 
-react2AngularDirective('simpleReactPanel', SimpleReactPanel, ['name']);
+
+// Same as react2AngularDirective in Grafana Core
+coreModule.directive( 'simpleReactPanel', [
+  'reactDirective',
+  reactDirective => {
+    return reactDirective(SimpleReactPanel, ['name']);
+  },
+]);
+
+

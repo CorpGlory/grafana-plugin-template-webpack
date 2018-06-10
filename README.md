@@ -14,15 +14,14 @@ Fork from [CorpGlory](https://github.com/CorpGlory/grafana-plugin-template-webpa
 * Adds tslint & prettier
 * includes an editor page
 * simple [circleci](https://circleci.com/gh/ryantxu/grafana-plugin-template-webpack) config
-* ...
+* react component
+
 
 # TODO
 * icon
 * tests
 
 # Wishlist
-* better debugging?  view sources is all minified :(
-* react...
 * simple tests & circleci verification
 * 'release' script.  'dist' is ignored... but release script should make a branch add dist and remove the .gitignore... then tag it?
     * pull requests with dist included are really annoying
