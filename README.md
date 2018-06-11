@@ -1,41 +1,43 @@
-# Webpack Template for Grafana plugins development
+# Webpack/Typescript Template for Grafana plugins development
 
-Grafana [plugin](http://docs.grafana.org/plugins/developing/development/)
-[webpack](https://webpack.github.io) version
+[![CircleCI](https://circleci.com/gh/ryantxu/grafana-plugin-template-webpack/tree/master.svg?style=svg)](https://circleci.com/gh/ryantxu/grafana-plugin-template-webpack/tree/master)
+[![dependencies Status](https://david-dm.org/ryantxu/grafana-plugin-template-webpack/status.svg)](https://david-dm.org/ryantxu/grafana-plugin-template-webpack)
+[![devDependencies Status](https://david-dm.org/ryantxu/grafana-plugin-template-webpack/dev-status.svg)](https://david-dm.org/ryantxu/grafana-plugin-template-webpack?type=dev)
 
-# Features
 
-* Uses npm instead of bower
-* Avoid using `/external` folder with libs’ sources (but you can, if you want)
-* Smaller resulting bundle compared to Grunt build
-* All webpack features available
-* SASS support with separate styles for dark and light Grafana themes
-* Debugging with [vscode-chrome-debug](https://github.com/Microsoft/vscode-chrome-debug)
+Fork from [CorpGlory](https://github.com/CorpGlory/grafana-plugin-template-webpack)
+
+
+# Changes
+
+* typescript
+* webpack 4
+* Copies README
+* Automatically puts the version & date in plugin.json
+* Adds tslint & prettier
+* includes an editor page
+* simple [circleci](https://circleci.com/gh/ryantxu/grafana-plugin-template-webpack) config
+* icon
+
+
+# TODO
+* simple react component... props not working? 
+* tests
+
+# Wishlist
+* simple tests & circleci verification
+* 'release' script.  'dist' is ignored... but release script should make a branch add dist and remove the .gitignore... then tag it?
+    * pull requests with dist included are really annoying
+
 
 # Build plugin
 
 ```
-npm install
-npm run build
+yarn install
+yarn build
 ```
-
-# Styles
-There are template SASS files at [src/css/](src/css).
-
-__Change root tag__ in [SASS files](src/css) __to default Grafana tag (see example below) with ID of your plugin__ in order __to prevent CSS conflicts between plugins__.
-
-Root tag example: panel-plugin-_grafana-plugin-template-webpack_ (where _grafana-plugin-template-webpack_ is ID of your plugin).
-
-If you don't need separate styles for for dark and light themes - follow comments in [module.js](src/module.js).
-
-If you want to use CSS instead of SASS - just change files extensions at [src/css/](src/css) and in [module.js](src/module.js).
-
-# See also
-
-* [TypeScript extension](https://github.com/CorpGlory/grafana-plugin-template-webpack-typescript)
-* [Progress List plugin](https://github.com/CorpGlory/grafana-progress-list) - full plugin with assets, libs, etc based on this temlpate
 
 
 ## Credits
 
-Made by [CorpGlory Team](http://corpglory.com/)
+Forked from [CorpGlory Team](http://corpglory.com/)

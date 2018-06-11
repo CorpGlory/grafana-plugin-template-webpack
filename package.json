@@ -1,28 +1,65 @@
 {
   "name": "grafana-plugin-template-webpack",
-  "version": "1.0.0",
+  "version": "1.0.0-dev",
   "description": "Some description",
   "main": "dist/module.js",
   "scripts": {
     "build": "webpack --config build/webpack.prod.conf.js",
-    "dev": "webpack --config build/webpack.dev.conf.js"
+    "dev": "webpack --config build/webpack.dev.conf.js",
+    "precommit": "pretty-quick --staged",
+    "pretty": "prettier --write src/**/*.ts",
+    "lint": "tslint -c tslint.json --project tsconfig.json"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.scss": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "singleQuote": true,
+    "printWidth": 120
   },
   "keywords": [],
   "author": "Alexey Velikiy",
   "license": "MIT",
   "repository": "https://github.com/CorpGlory/grafana-plugin-template-webpack",
+  "dependencies": {
+    "lodash": "^4.17.10",
+    "moment": "^2.22.2",
+    "react": "^16.4.0"
+  },
   "devDependencies": {
+    "@types/grafana": "github:CorpGlory/types-grafana",
+    "@types/lodash": "^4.14.74",
+    "@types/react": "^16.0.25",
+    "@types/react-dom": "^16.0.3",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.0",
-    "copy-webpack-plugin": "^4.0.1",
-    "css-loader": "^0.28.9",
-    "extract-text-webpack-plugin": "^3.0.2",
+    "copy-webpack-plugin": "^4.5.1",
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "grafana-sdk-mocks": "github:ryantxu/grafana-sdk-mocks",
+    "install": "^0.11.0",
     "loader-utils": "^1.1.0",
-    "node-sass": "^4.7.2",
-    "sass-loader": "^6.0.6",
-    "style-loader": "^0.20.1",
-    "webpack": "^3.6.0"
-  },
-  "dependencies": {}
+    "ng-annotate-loader": "^0.6.1",
+    "ng-annotate-webpack-plugin": "^0.3.0",
+    "ngtemplate-loader": "^2.0.1",
+    "node-sass": "^4.9.0",
+    "prettier": "^1.13.5",
+    "pretty-quick": "^1.4.1",
+    "replace-in-file-webpack-plugin": "^1.0.6",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "ts-loader": "^4.4.0",
+    "typescript": "^2.9.1",
+    "webpack": "^4.12.0",
+    "webpack-cli": "^3.0.3"
+  }
 }
