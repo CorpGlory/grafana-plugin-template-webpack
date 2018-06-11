@@ -5,8 +5,8 @@ import coreModule from 'app/core/core_module';
 
 
 export interface SimplePanelProps {
-  value?: string;
-  a: number;
+  name: string;
+  value: number;
   onClicked: () => void;
 }
 
@@ -20,17 +20,18 @@ export class SimpleReactPanel extends React.Component<SimplePanelProps,SimplePan
     super(props);
     console.log( 'CONSTRUCTOR', this.props );
     this.state = {
-      counter: 0,
+      counter: this.props.value,
     };
   }
 
   render() {
     console.log( 'RENDER', this.props, this.state );
     return (
-      <div onClick={this.props.onClicked}>Hello 
-        value='{this.props.value}' 
-        a='{this.props.a}' 
-        from react! ({this.state.counter}...)</div>
+      <div onClick={this.props.onClicked} className="pointer">
+        Hello: {this.props.name} 
+        &nbsp;
+        from react! ({this.state.counter}/{this.props.value})
+      </div>
     );
   }
 }
@@ -40,7 +41,7 @@ export class SimpleReactPanel extends React.Component<SimplePanelProps,SimplePan
 coreModule.directive( 'simpleReactPanel', [
   'reactDirective',
   reactDirective => {
-    return reactDirective(SimpleReactPanel, ['value', 'a', 'onClicked']);
+    return reactDirective(SimpleReactPanel, ['name', 'value', 'onClicked']);
   },
 ]);
 

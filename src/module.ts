@@ -25,6 +25,10 @@ class Ctrl extends PanelCtrl {
     this.events.on('init-edit-mode', this.onInitEditMode.bind(this));
   }
 
+  clickedInReact(data) {
+    console.log( 'Message from react', data );
+  }
+
   onInitEditMode() {
     this.addEditorTab('Editor', this.panelPath + 'partials/editor.html', 1);
     this.editorTabIndex = 1;
