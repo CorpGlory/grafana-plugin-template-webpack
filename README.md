@@ -36,6 +36,5 @@ If you want to use CSS instead of SASS - just change files extensions at [src/cs
 * [Progress List plugin](https://github.com/CorpGlory/grafana-progress-list) - full plugin with assets, libs, etc based on this temlpate
 
 
-## Credits
-
-Made by [CorpGlory Team](http://corpglory.com/)
+## About CorpGlory Inc.
+The project developed by [CorpGlory Inc.](https://corpglory.com/), a company which provides high quality software development, data visualization, Grafana and monitoring consulting.
