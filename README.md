@@ -34,6 +34,7 @@ If you want to use CSS instead of SASS - just change files extensions at [src/cs
 
 * [TypeScript extension](https://github.com/CorpGlory/grafana-plugin-template-webpack-typescript)
 * [Progress List plugin](https://github.com/CorpGlory/grafana-progress-list) - full plugin with assets, libs, etc based on this temlpate
+* https://github.com/chartwerk/grafana-chartwerk-app -- no need to care about build system and just goto coding, we support transfer to newer Grafana versions
 
 
 ## About CorpGlory Inc.
